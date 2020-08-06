@@ -118,7 +118,12 @@ class Delete(CLICommand):
 class List(ListCommand):
     """List of vrrp subnets"""
 
-    columns = ['id', 'project_id', 'cidr', 'status']
+    columns = ['id',
+               'master_region',
+               'slave_region',
+               'project_id',
+               'cidr',
+               'status']
     sorting_support = True
 
     def get_parser(self, prog_name):
